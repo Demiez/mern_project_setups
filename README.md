@@ -1,1 +1,1 @@
-# project_setups
+# mern_project_setups
