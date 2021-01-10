@@ -4,11 +4,13 @@
     "noImplicitAny": false,
     "module": "commonjs",
     "target": "es5",
-    "outDir": "./dist",
-    "lib": ["ESNext", "dom", "dom.iterable"],
+    "lib": [
+      "esnext",
+      "dom",
+      "dom.iterable"
+    ],
     "removeComments": true,
     "allowSyntheticDefaultImports": true,
-    "forceConsistentCasingInFileNames": true,
     "jsx": "react",
     "allowJs": true,
     "baseUrl": "./",
@@ -17,8 +19,21 @@
     "moduleResolution": "node",
     "downlevelIteration": true,
     "paths": {
-      "components/*": ["dist/src/components/*"]
-    }
+      "components/*": [
+        "src/components/*"
+      ]
+    },
+    "typeRoots": [
+      "./node_modules/@types/"
+    ]
   },
-  "include": ["./src", "./webpack.config.ts"]
+  "include": [
+    "./src",
+    "./webpack.config.ts",
+    "./custom.d.ts"
+  ],
+  "exclude": [
+    "./**/*.test.*",
+    "./node_modules/"
+  ]
 }

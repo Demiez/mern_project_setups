@@ -10,11 +10,6 @@ const webpackConfig = (): Configuration => ({
       components: path.resolve(__dirname, './src/components/'),
     },
   },
-  devServer: {
-    hot: true,
-    contentBase: path.resolve(__dirname, 'dist'),
-    publicPath: '/',
-  },
   output: {
     path: path.join(__dirname, '/build'),
     filename: 'bundle.js',
